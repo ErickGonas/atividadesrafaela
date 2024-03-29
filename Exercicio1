@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        int numero, conNum = 0, prodImpar = 1, somapar = 0;
+
+        while (conNum < 5) {
+            System.out.println("Digite o numero: ");
+            numero = ler.nextInt();
+
+            if (numero % 2 == 0) {
+                somapar += numero;
+            } else {
+                prodImpar *= numero;
+            }
+
+            conNum++;
+        }
+
+        System.out.println("O produto dos números ímpares é: " + prodImpar);
+        System.out.println("A soma dos números pares é: " + somapar);
+    }
+}
