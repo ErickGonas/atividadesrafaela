@@ -1,0 +1,31 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+       
+        Scanner ler = new Scanner(System.in);
+        int valor,contNum=0;
+        double cubo,quadrado,raiz;
+
+        System.out.println("Digite o número que será calculado: ");
+        valor = ler.nextInt();
+
+        System.out.println("Aqui está o resultado do cálculo de: "+ valor);
+        
+        if (valor <= 0) {
+            System.out.println("Você não ta querendo calcular numero negativo não n");
+        } else {
+            while (contNum < 10) {
+                cubo = Math.pow(valor, 3);
+                System.out.println("O valor ao cubo do número é: " + cubo);
+                
+                quadrado = Math.pow(valor, 2);
+                System.out.println("O valor ao quadrado do número é: " + quadrado);
+                
+                raiz = Math.sqrt(valor);
+                System.out.printf("A raiz do número é: %.2f%n", raiz);
+                
+                contNum++;
+            }
+        }
+    }
+}
