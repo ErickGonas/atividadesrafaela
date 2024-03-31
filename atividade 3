@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		int idade,limite=0;
+		float altura,peso;
+		while (limite<10){
+		    
+		    System.out.println("Digite a altura da pessoa:");
+		    altura=ler.nextFloat();
+		    
+		    System.out.println("Digite o peso da pessoa");
+		    peso = ler.nextFloat();
+		    
+		    System.out.println("Digite a idade da pessoa");
+		    idade = ler.nextInt();
+		    
+		    System.out.println("------------------------------------------");
+		    limite++;
+		}
+	}
+}
