@@ -1,0 +1,44 @@
+import java.io.IOException;
+import java.util.*;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+    
+        Scanner ler = new Scanner(System.in);
+        int experimento, count = 0;
+    
+        System.out.println("Digite a quantidade de experimentos");
+        experimento = ler.nextInt();
+        
+        if (experimento < 0) {
+            System.out.println("O número de experimentos deve ser maior que zero.");
+        } else if (experimento > 0) {
+            for (; count < experimento; count++) { 
+                System.out.println("Quantos RATOS(R)?");
+                int numRatos = ler.nextInt();
+                System.out.println("Quantos COELHOS(C)?");
+                int numCoelhos = ler.nextInt();
+                System.out.println("Quantos SAPOS(S)?");
+                int numSapos = ler.nextInt();
+                
+                // Verifica se a quantidade de cada tipo de cobaia é negativa
+                if (numRatos >= 0 && numCoelhos >= 0 && numSapos >= 0) {
+                    // Se não for negativa, continua
+                    // Verifica se a quantidade ultrapassa 15
+                    if (numRatos <= 15 && numCoelhos <= 15 && numSapos <= 15) {
+                        // Se não ultrapassa, continua
+                        // Aqui você pode fazer o que quiser com os valores inseridos
+                    } else {
+                        System.out.println("A quantidade de cobaias para um ou mais tipos ultrapassou o limite de 15.");
+                        break; // Sai do loop caso a soma ultrapasse 15
+                    }
+                } else {
+                    System.out.println("A quantidade de cobaias não pode ser negativa.");
+                    break; // Sai do loop caso a quantidade seja negativa
+                }
+            }
+        }
+        System.out.println(" ");
+    }
+}
