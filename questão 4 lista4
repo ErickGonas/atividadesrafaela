@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        int kill, death, assist;
+        String vencedor;
+
+        for (int round = 1; round < 6; round++) {
+            System.out.println(round);
+
+            System.out.println("Quantos kills? ");
+            kill = ler.nextInt();
+
+            System.out.println("Quantas mortes? ");
+            death = ler.nextInt();
+
+            System.out.println("Quantos Assists? ");
+            assist = ler.nextInt();
+
+            System.out.println("-------------------------------");
+
+            System.out.println("MEDALHAS");
+            if (kill < 5) {
+                System.out.println("NOOB");
+            }
+            if (kill >= 20) {
+                System.out.println("MASTER");
+            }
+            if (death >= 20) {
+                System.out.println("Houston, we have a problem");
+            }
+            if (assist >= 20) {
+                System.out.println("TEAM WORK");
+            }
+            System.out.println("-------------------------------");
+            System.out.println("kills " + kill);
+            System.out.println("Deaths " + death);
+            System.out.println("Assists " + assist);
+
+            System.out.println("Houve vencedor? (s/n)");
+            vencedor = ler.next();
+            if (vencedor.equalsIgnoreCase("s")) {
+                break;
+            }
+        }
+    }
+}
