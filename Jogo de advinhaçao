@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Main {
+    public static void main (String[]args) {
+     Scanner ler=new Scanner(System.in);
+    
+    Random random= new Random();
+    
+    int numeroaleatorio= random.nextInt(101);
+    
+    System.out.println("Bem-vindo ao Jogo de Advinhação!");
+    
+    int tentativas=0;
+    int palpite=0;
+    
+    while (palpite!=numeroaleatorio){
+        System.out.println("Faça seu palpite");
+        palpite= ler.nextInt();
+        tentativas++;
+     if (palpite<numeroaleatorio){
+        System.out.println("valor muito baixo");
+        System.out.println(" ");
+    } else if (palpite>numeroaleatorio){
+        System.out.println("valor muito alto");
+        System.out.println(" ");
+        }
+    }
+    System.out.println("parabens vc acertou o numero "+numeroaleatorio+" em "+tentativas+" tentativas.");
+    
+    }
+}
