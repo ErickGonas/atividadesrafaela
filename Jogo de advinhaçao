@@ -9,13 +9,18 @@ public class Main {
     int numeroaleatorio= random.nextInt(101);
     
     System.out.println("Bem-vindo ao Jogo de Advinhação!");
-    
+    System.out.println("Digite -1 a qualquer momento para sair.");
     int tentativas=0;
     int palpite=0;
     
-    while (palpite!=numeroaleatorio){
+    while (palpite!=numeroaleatorio&&palpite!=-1){
         System.out.println("Faça seu palpite");
         palpite= ler.nextInt();
+        
+        if (palpite== -1){
+            System.out.println("Voce saiu do jogo.");
+            System.exit(0);
+        }
         tentativas++;
      if (palpite<numeroaleatorio){
         System.out.println("valor muito baixo");
@@ -29,3 +34,4 @@ public class Main {
     
     }
 }
+
